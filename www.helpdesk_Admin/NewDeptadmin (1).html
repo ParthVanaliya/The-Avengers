@@ -1,0 +1,91 @@
+
+<html>
+<head>
+ <title>Department</title>
+
+<link rel="stylesheet" href="NewDeptadmin.css" type="text/css">
+
+
+</head>
+
+<body>   
+   <script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
+   <script>
+   $(document).ready(function() {
+   $(".b1").click(function() {
+   $("#board").append("<div class='card'> <div class='image'><img name='image_1' src='https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Gfp-missouri-st-louis-clubhouse-pond-and-scenery.jpg/1199px-Gfp-missouri-st-louis-clubhouse-pond-and-scenery.jpg'></div><div class='title'><h1 name='head_2'>Write title Here</h1></div><div class='des'><p name='para_1'>You can Add Description Here...</p><button name='bt_1' onclick='window.location.href ='location.html';'>View employee</button><button class='r3'>Remove</button></div></div>");
+   });
+   
+   });
+ 
+   $(document).ready(function() {
+  $('.r1').click(function() {
+   $('.card1').remove();
+  });
+});
+
+$(document).ready(function() {
+  $('.r2').click(function() {
+   $('.card2').remove();
+  });
+});
+
+
+
+   </script>
+<!--header-->
+ <div class="headerr">
+  <h1 class="heading" name="head_1">Departments</h1>
+ </div>
+ <button class="b1">AddDepartment</button>
+ 
+<div class="main"  style="padding-right: 20px;">
+   
+
+ <!--cards -->
+<div class="card1">
+<div class="image">
+   <img name="image_1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Gfp-missouri-st-louis-clubhouse-pond-and-scenery.jpg/1199px-Gfp-missouri-st-louis-clubhouse-pond-and-scenery.jpg">
+</div>
+<div class="title">
+ <h1 name="head_2">Write title Here</h1>
+</div>
+<div class="des">
+ <p name="para_1">You can Add Description Here...</p>
+<button name="bt_1" onclick="window.location.href ='location.html';">View employee</button>
+<button class="r1">Remove</button>
+</div>
+</div>
+
+
+
+<div class="card2">
+<div class="image">
+   <img name="image_5" src="https://cdn.pixabay.com/photo/2018/01/09/03/49/the-natural-scenery-3070808_1280.jpg">
+</div>
+<div class="title">
+ <h1 name="head_6">Write title Here</h1>
+</div><br>
+<div class="des">
+ <p name="para_5">You can Add Description Here...</p>
+<button name="bt_1" onclick="window.location.href ='location.html';">View employee</button>
+<button class="r2">Remove</button>
+</div>
+</div>
+</div>
+
+<div id="board"></div>
+<script>
+     $(document).ready(function() {
+  $('.r3').click(function() {
+   $('#board').remove();
+  });
+});
+
+   </script>
+
+
+
+</div>
+</body>
+</html>
