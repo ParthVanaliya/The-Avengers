@@ -1,239 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-    <title>HelpDesk</title>
-    <style>
-   
-        body {
-          background-image: url('bg.jpg');
-          background-size: cover;
-          background-repeat: no-repeat;
-          background-attachment: scroll;
-        }
-        #img1{
-            border-radius: 50%;
-        }
-        #jb{
-            
-             font-size: 35px;
-             background: -webkit-linear-gradient(#eee, #333);
-             -webkit-background-clip: text;
-             -webkit-text-fill-color: transparent;
-        }
-        p{
-            text-align: center;
-            color: whitesmoke;
-            font-size: 55px;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            font-weight: bold;
-            
-        }
-        #p1{
-            text-align: center;
-            color: goldenrod;
-            font-size: 55px;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            font-weight: bold;
-        }
-
-
-#b1{
-    font-family: 'Poppins';
-    width: 250px;
-    height: 50px;
-    border: none;
-    outline: none;
-    color: black;
-    background: burlywood;
-    text-transform: uppercase;
-    font-weight: 800;
-    letter-spacing: 4px;
-    cursor: pointer;
-    position: relative;
-    z-index: 0;
-    transition: 0.5s ease-in-out;
-    margin-right: 16px;
-}
-
-#b1:before {
-    content: '';
-    background: linear-gradient(45deg, #FF0000, #FFF700, #FF7000, #FF00FE, #3FF4EB, #9E00FF, #00BEFF, #FF00DD, #FF0000);
-    position: absolute;
-    top: -2px;
-    left:-2px;
-    background-size: 400%;
-    z-index: -1;
-    filter: blur(5px);
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    animation: glowing 20s linear infinite;
-    opacity: 0;
-    transition: opacity .3s ease-in-out;
-}
-
-#b1:active {
-    color: #000
-}
-
-#b1:active:after {
-    background: transparent;
-}
-
-#b1:hover {
-    transform: scale(1.05);
-}
-
-#b1:hover:before {
-    opacity: 1;
-}
-
-#b1:after {
-    z-index: -1;
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #ffffff;
-    left: 0;
-    top: 0;
-}
-
-      
-        </style>
-</head>
-<body>
-  <header>
-<section class="text-gray-600 body-font">
-  <div class="container px-5 py-24 mx-auto flex flex-wrap">
-      <img id="img1" src="helpdesk.png.png" style="width: 100px; height: 50px;" alt="helpdesk">
-    <h2 class="sm:text-3xl text-2xl text-gray-900 font-medium title-font mb-2 md:w-2/5" id="jb">HelpDesk</h2>
-    </div>
-</section>
-</header>
-<div>
-    <p id="p1">Welcome To HelpDesk</p>
-</div>
-<div style="margin-top: 60px;">
-    <p>Choose a Language</p>
-    <center>
-	<!--<a href="NewDept.php" >English</a>-->
-    <button id="b1" onclick="window.location.href='NewDept.php';">English</button>
-    <!-- <button id="b1">ગુજરાતી</button> -->
-    <button id="b1">हिन्दी</button>
-</div>
-<footer class="text-center bg-gray-900 text-white" style="margin-top:100px ;">
-    <div class="container px-6 pt-6">
-      <div class="flex justify-center mb-6">
-        <a href="#!" type="button" class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
-          <svg aria-hidden="true"
-          focusable="false"
-          data-prefix="fab"
-          data-icon="facebook-f"
-          class="w-2 h-full mx-auto"
-          role="img"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 320 512"
-        >
-          <path
-            fill="currentColor"
-            d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
-          ></path>
-          </svg>
-        </a>
-  
-        <a href="#!" type="button" class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
-          <svg aria-hidden="true"
-          focusable="false"
-          data-prefix="fab"
-            data-icon="twitter"
-            class="w-3 h-full mx-auto"
-            role="img"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 512 512"
-          >
-            <path
-              fill="currentColor"
-              d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
-            ></path>
-          </svg>
-        </a>
-  
-        <a href="#!" type="button" class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
-          <svg aria-hidden="true"
-          focusable="false"
-          data-prefix="fab"
-            data-icon="google"
-            class="w-3 h-full mx-auto"
-            role="img"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 488 512"
-          >
-            <path
-              fill="currentColor"
-              d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"
-            ></path>
-          </svg>
-        </a>
-  
-        <a href="#!" type="button" class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
-          <svg aria-hidden="true"
-          focusable="false"
-          data-prefix="fab"
-          data-icon="instagram"
-            class="w-3 h-full mx-auto"
-            role="img"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 448 512"
-          >
-            <path
-              fill="currentColor"
-              d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
-            ></path>
-          </svg>
-        </a>
-  
-        <a href="#!" type="button" class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
-          <svg aria-hidden="true"
-          focusable="false"
-          data-prefix="fab"
-          data-icon="linkedin-in"
-            class="w-3 h-full mx-auto"
-            role="img"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 448 512"
-          >
-            <path
-              fill="currentColor"
-              d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
-            ></path>
-          </svg>
-        </a>
-  
-        <a href="#!" type="button" class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
-          <svg aria-hidden="true"
-          focusable="false"
-          data-prefix="fab"
-          data-icon="github"
-            class="w-3 h-full mx-auto"
-            role="img"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 496 512"
-          >
-            <path
-              fill="currentColor"
-              d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
-            ></path>
-          </svg>
-        </a>
-      </div>
-    </div>
-  
-    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.2);">
-     Gyanmajari Institute Of Technology 
-    </div>
-  </footer>
-</body>
-</html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+		<link rel="icon" type="image/png" sizes="16x16" href="images/download.jpg" >
+		<title>HelpDesk</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+		<link rel="stylesheet" href="HomePage.css">
+		<script src="https://unpkg.com/scrollreveal"></script>
+		
+		<style>
+			
+		</style>
+		
+		<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+	</head>
+	<body>
+        <div class="homepage" style="background: linear-gradient(rgba(255, 255, 255, 0.6),rgba(0,0,0,0.1)), url('images/bg2.jpg');background-size: cover; background-repeat: no-repeat; background-attachment: scroll;">
+			<!-- <header >
+				<section class="text-gray-600 body-font">
+				<div class="container px-5 py-24 mx-auto flex flex-wrap" style="margin: -70px 0 0 10px;">
+				<img id="img1" src="download.jpg" style="width: 60px; height: 50px;" alt="helpdesk">
+				
+				<img src="HelpDesk.png" style="width: 165px; height: 30px; margin-top: 10px; margin-left: 3.6px;" alt="helpdesk">
+				</div>
+				</section>
+			</header> -->
+			<div class="first">
+				<div>
+					<p id="p1" class="main-title">Welcome To HelpDesk</p>
+				</div>
+				<div id="choose" style="">
+					<div class="text-box" style="">
+						<p style="font-size: 1.35em; line-height: 1.35em; color: #020939; width: 400px; text-align: right; padding-top: 6px; ">Find The Necessary Information About
+						Employee you desire to approach.</p>
+					<p align="left" style="font-size: 1.35em; line-height: 1.35em; color: #020939; width: 400px; text-align: right;margin-bottom: -6px;"> Choose Your Primary Language Below.</p></div>
+					
+					<div id="lang" style="display: flex; font-family: 'Inter' Arial; margin-top: 30px;">
+						<div class="btn">
+							<button class="btn1" onclick="window.location.href='#three';" type="button" style="height: 45px; width: 210px; margin-right: 7px;">Choose Language</button>
+							<div class="btn-bg1"></div>
+						</div>
+						<div class="btn">
+							<button class="btn2" onclick="window.location.href = '#one';" type="button"  style="height: 45px; width: 210px; margin-left: 7px;">Learn More</button>
+							<div class="btn-bg2"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<footer class="text-center bg-gray-900 text-white" style="margin-top: 8rem;">
+				
+				
+				<div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.2);">
+				Collector Office Chhotaudepur
+				</div>
+			</footer>
+		</div>
+		
+		<!-- One -->
+		<section id="one" class="wrapper style2 special" style="text-align: center; box-sizing: inherit; padding-top: 48px; margin: 0 0 1em 0; letter-spacing: -0.0125em; font-weight: normal; color: #020939; font-size: 1.75em; line-height: 1.5em; ">
+			<header class="major">
+				<b><h2 style="">This is Helpdesk for Collector Office Chhotaudepur<br /></h2></b>
+			</header>
+			
+		</section>
+		
+		<!-- Two -->
+		<section id="two" class="wrapper" style="">
+			<div class="container">
+				<section class="spotlight spotlight1" style="border-top: solid 2px #eeeeee; margin-top: 48px; padding-top: 48px;">
+					<div class="image" style="margin-right: 6px;"><img src="images/download (1).jpg" alt="" /></div>
+					<div class="content 1" style="padding-left: 21px;">
+						<h3 class="heading head1" style="">Introduction</h3>
+						<p align="left" class="info info1" style="text-align: left;">A Helpdesk is a Customer service function that provides support to customers or users by answering their questions and addressing their problems.</p>
+					</div>
+				</section>
+				<section class="spotlight spotlight2" style="margin-top: 0; padding-top: 48px; border-top: solid 2px #eeeeee;">
+				<div class="content 2" style="text-align: right; padding-right: 21px;">
+				<h3 class="heading head2" id="head2" style="">Location</h3>
+				<p align="right" class="info info2" style="text-align: right;">You can find here the address of the employee you wish to contact, which includes the department building, floor number, and cabin number.</p>
+				<!-- Here you will find the location of the employee you desire to reach out that includes department building,floor no,cabin no as well. -->
+				</div>
+				<div class="image"><img src="images/location1.png" alt="" style="height: 200px;" /></div>
+				
+				</section>
+				<section class="spotlight spotlight3" style="margin-top: 0; padding-top: 48px; padding-bottom: 48px;  border-bottom : solid 2px #eeeeee;border-top: solid 2px #eeeeee;">
+				<div class="image"><img src="images/rts.png" alt="" style="height: 200px;" /></div>
+				<div class="content 3" style="margin-bottom: 0; padding-left: 21px;">
+				<h3 class="heading head3" style="">Real Time Status</h3>
+				<p align="left" class="info info3" style="text-align: left;">You can get real-time updates of the status of your employees here. For example, you will learn whether the employee is available or not, if he is busy, or if he is present or absent.</p>
+				<!-- Here you will get real time status update of the employees.<br>You will get to know about information like if the employee is available or not , if he is busy ,or if he is present or absent today. -->
+				</div>
+				</section>
+				</div>
+				</section>
+				
+				<!-- Three -->
+				<!-- <section id="three" class="wrapper style2 special">
+				<header class="major">
+				<h2 style="font-family: 'Alice';">Choose A Language.</h2>
+				<p>Currently we provide only two languages Hindi and English<br />
+				you can choose between them to proceed your search.</p>
+				</header>
+				<ul class="actions special">
+				<li><button type="button" class="btn btn-primary btn-lg" onclick="window.location.href='file:///D:/bootstrap/Templates/T1/second.html'">Englsih</button></li>
+				<li><button type="button" class="btn btn-primary btn-lg" onclick="window.location.href='file:///D:/bootstrap/Templates/T1/second.html'">Hindi</button></li>
+				</ul>
+				</section> -->
+				
+				<div id="three" style="margin-top: 60px; border-bottom: solid 2px #eeeeee; margin-left: auto;
+				margin-right: auto;
+				width: 50em;">
+				<div class="CL">
+				<p style="  color: #22284a; font-size: 30px; margin-bottom: 15px;">Choose a Language</p>
+				<p style="color: #020939;	opacity: 0.6;	letter-spacing: -0.02em;	font-weight: normal;	line-height: 1.5em;	font-size: 1.35em;	 margin-bottom: 21px;">As of right now, we only provide two languages in our search system : Hindi and English.<br> You can choose between them to find the information you are seeking.</p>
+				</div>
+				
+				
+				<div id="lang" style="display: flex; font-family: 'Inter' Arial;">
+				<div class="btn">
+				<button class="btn3" onclick="window.location.href='demodeptcard.php?lang=english';" type="button" style="height: 45px; width: 210px; margin-top: 0px; margin-left: 172px; margin-right: 7px;">English</button>
+				<div class="btn-bg3"></div>
+				</div>
+				<div class="btn">
+				<button class="btn4" onclick="window.location.href = 'demodeptcard.php?lang=hindi';" type="button"  style="height: 45px; width: 210px; margin-top: 0px; margin-left: 7px;">हिन्दी</button>
+				<div class="btn-bg4"></div>
+				</div>
+				<div class="btn" style="margin-left : 5px;">
+					<button class="btn4" onclick="window.location.href = 'demodeptcard.php?lang=guj';" type="button"  style="height: 45px; width: 210px; margin-top: 0px; margin-left: 7px;">ગુજરાતી</button>
+					<div class="btn-bg5"></div>
+				</div>
+				</div>
+				</div>
+				
+				
+				<audio controls autoplay src="Voice HindiEnglish.mp3" style="display: none;">				
+				
+				<!-- Scripts -->
+				
+				<script>
+				ScrollReveal({
+				//reset: true,
+				distance: '60px',
+				duration: 2000,
+				// delay: 400,
+				
+				});
+				
+				
+				ScrollReveal().reveal('.main-title', { delay: 50, origin: 'top',  rotate: {
+				y: 20
+				}
+				});
+				ScrollReveal().reveal('.text-box', { delay: 75, origin: 'top', rotate: {
+				y: 20
+				}
+				});
+				ScrollReveal().reveal('.btn1, .btn-bg1, .btn2, .btn-bg2', { delay: 100, origin: 'bottom', rotate: {
+				y: 20
+				}});
+				ScrollReveal().reveal('.major', { delay: 75, origin: 'bottom', rotate: {
+				y: 20
+				}
+				});
+				ScrollReveal().reveal('.info2', { delay: 400, origin: 'left', rotate: {
+				y: 100
+				} });
+				ScrollReveal().reveal('.info1 , .info3', { delay: 400, origin: 'right',rotate: {
+				y: 100
+				} });
+				ScrollReveal().reveal('#head2', { delay: 300, origin: 'left', rotate: {
+				y: 100
+				}});
+				ScrollReveal().reveal('.head1 , .head3', { delay: 300, origin: 'right', rotate: {
+				y: 100
+				} });
+				ScrollReveal().reveal('.spotlight1 , .spotlight3', { delay: 300, origin: 'left', interval: 100 ,rotate: {
+				y: 100
+				}});
+				ScrollReveal().reveal('.spotlight2', { delay: 300, origin: 'right', interval: 100 ,rotate: {
+				y: 100
+				}});
+				ScrollReveal().reveal('.CL', { delay: 125, origin: 'bottom',  rotate: {y:20}
+				});
+				ScrollReveal().reveal('.btn3, .btn4, .btn-bg3, .btn-bg4, .btn-bg5', { delay: 145, origin: 'bottom', rotate: {
+				y: 20
+				} });
+				
+				</script>
+				<!-- <script src="NewUi/assets/js/jquery.scrolly.min.js"></script>
+				<script src="NewUi/assets/js/browser.min.js"></script>
+				<script src="NewUi/assets/js/jquery.min.js"></script>
+				<script src="NewUi/assets/js/breakpoints.min.js"></script>
+				<script src="NewUi/assets/js/util.js"></script>
+				<script src="NewUi/assets/js/main.js"></script> -->
+				
+	</body>
+</html>		
+				
+								
